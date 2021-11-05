@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Product } from './Product.model';
 
+
+/**
+ * @InventoryApp: the top-level component for our application
+ */
+
 @Component({
-  selector: 'app-root',
+  selector: 'inventory-app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'inventory-app';
   products: Product[];
-
-  productWasSelected(product: Product): void {
-    console.log('Product clicked: ', product);
-  }
 
   constructor() {
     this.products = [
@@ -38,6 +38,8 @@ export class AppComponent {
 
   }
 
-
+  productWasSelected(product: Product): void {
+    console.log('Product clicked: ', product);
+  }
 
 }
