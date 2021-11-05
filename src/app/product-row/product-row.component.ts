@@ -1,20 +1,15 @@
-import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { Component, Input,  HostBinding } from '@angular/core';
 import { Product } from '../Product.model';
 
 @Component({
   selector: 'product-row',
-  templateUrl: './product-row.component.html',
-  styleUrls: ['./product-row.component.css']
+  templateUrl: './product-row.component.html'
 })
-export class ProductRowComponent implements OnInit {
+export class ProductRowComponent  {
   @Input() product: Product;
   @HostBinding('attr.class') cssClass = 'item';
 
-  constructor() { 
-    
-  }
+  
 
-  ngOnInit(): void {
-  }
 
 }

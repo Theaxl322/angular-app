@@ -6,7 +6,7 @@ import { Product } from '../Product.model';
   templateUrl: './product-list.component.html',
 })
 export class ProductListComponent implements OnInit {
-  @Input() productList: Product[];
+  @Input() productList!: Product[];
   @Output() onProductSelected: EventEmitter<Product>;
   private currentProduct: Product;
 

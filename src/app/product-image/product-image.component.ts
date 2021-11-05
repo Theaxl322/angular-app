@@ -3,7 +3,9 @@ import { Product } from '../Product.model';
 
 @Component({
   selector: 'product-image',
-  templateUrl: './product-image.component.html',
+  template: `
+  <img class="product-image" [src]="product.imageUrl">
+  `,
   styleUrls: ['./product-image.component.css']
 })
 export class ProductImageComponent implements OnInit {
