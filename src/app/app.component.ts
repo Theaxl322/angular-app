@@ -7,7 +7,7 @@ import { Product } from './Product.model';
  */
 
 @Component({
-  selector: 'inventory-app-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent {
